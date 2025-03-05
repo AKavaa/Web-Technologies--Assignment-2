@@ -1,0 +1,509 @@
+/*  Here are all the styles which I applied to my website
+The names are pretty much straight forward so looking at the code its easy to understand 
+where the styles were applied*/
+
+
+:root {
+
+    --Header-Color: #BE1622;
+    --Footer-Color: #34516C;
+    --Font-color: white;
+    --Letter-color: Gold;
+    --StudentUnion-Color: #0096FF;
+    --StudentUnion-Hover-Color: #0056B3;
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.studentshop {
+    background-color: var(--Header-Color);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.uclanlogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.home-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 60px;
+    font-size: 11px;
+    display: flex;
+    gap: 20px;
+    color: var(--Font-color);
+    cursor: pointer;
+}
+
+.home-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-header a:hover {
+    text-decoration: underline;
+}
+
+.products,
+.cart,
+.home {
+    color: var(--Font-color);
+    text-decoration: none;
+}
+
+.all-paragraphs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.first-title {
+    color: var(--Footer-Color);
+    font-size: 24px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.first-paragraph,
+.second-paragraph {
+    font-size: 11px;
+    font-family: sans-serif;
+    max-width: 600px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.bottom {
+    display: block;
+    font-size: 20px;
+    font-family: sans-serif;
+    max-width: 600px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    color: var(--Letter-color)
+}
+
+.second-title {
+    display: block;
+    font-size: 20px;
+    font-family: sans-serif;
+    max-width: 600px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    color: var(--Letter-color)
+}
+
+.video1 {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 10px;
+
+}
+
+.video2 {
+    display: block;
+    max-width: 600px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+
+
+}
+
+.Footer {
+    background-color: var(--Footer-Color);
+    height: 280px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: var(--Font-color);
+    padding-top: 20px;
+    flex-shrink: 0;
+
+}
+
+.Footer .column {
+    width: 30%;
+    font-size: 12px;
+}
+
+.Footer .column span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.studentunion {
+    font-size: 15px;
+    display: block;
+    text-decoration: underline;
+    color: var(--StudentUnion-Color);
+    margin-bottom: 10px;
+}
+
+.studentunion:hover {
+    color: var(--StudentUnion-Hover-Color);
+}
+
+#productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.prouduct-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.Products-tshirts-hoodies-jumpers {
+
+
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+
+}
+
+
+
+#tshirts {
+    margin-right: 10px;
+}
+
+#hoodies {
+
+    margin-right: 10px;
+}
+
+#jumpers {
+    margin-right: 10px;
+
+}
+
+
+
+.product-card {
+    width: 25%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+
+
+
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 200%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card .product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: gold;
+}
+
+.product-card .product-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.product-card .product-price {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+
+.buy-button {
+    font-size: 10px;
+}
+
+
+
+.buy-button {
+    font-size: 10px;
+}
+
+.Products-tshirts-hoodies-jumpers {
+
+
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+
+}
+
+#productDetails img {
+    width: 60%;
+
+}
+
+#productDetails {
+    text-align: center;
+
+}
+
+
+
+#productDetails {
+    font-size: 10px;
+
+
+}
+
+
+#products {
+    margin-right: 20px;
+
+}
+
+
+
+#tshirts {
+    margin-right: 10px;
+}
+
+#hoodies {
+
+    margin-right: 10px;
+}
+
+#jumpers {
+    margin-right: 10px;
+
+}
+
+#jumperContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.jumper-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.jumper-card {
+    width: 25%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.jumper-card img {
+    width: 100%;
+    max-width: 300%;
+    border-radius: 8px;
+}
+
+.jumper-card .jumper-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: var(--Letter-color);
+}
+
+.jumper-card .jumper-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.jumper-card .jumper-price {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#tshirtContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.tshirt-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.tshirt-card {
+    width: 25%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tshirt-card img {
+    width: 100%;
+    max-width: 300%;
+    border-radius: 8px;
+}
+
+.tshirt-card .tshirt-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: var(--Letter-color);
+}
+
+.tshirt-card .tshirt-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.tshirt-card .tshirt-price {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.readmore {
+    font-size: 10px;
+}
+
+
+.shopping-cart {
+    display: block;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 150px;
+    color: gold;
+
+}
+
+.shopping-cart-text {
+    margin-left: 150px;
+    font-size: 12px
+}
+
+.read-more-link {
+    font-size: 12px;
+}
+
+
+
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.cart-item-card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-details h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item-details p {
+    margin: 6px 0;
+}
+
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: darkgrey;
+    width: 210px;
+    height: 100%;
+    padding-top: 60px;
+}
+
+.mobile-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+
+}
+
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .burger {
+        display: block;
+    }
+
+    .home-header a {
+        display: none;
+    }
+}
