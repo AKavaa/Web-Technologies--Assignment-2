@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // ensures code runs when form is su
     $password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
     $address = $_POST['address'];
 
-
+//
     // Prepare a SQL query to check if the email already exists in the database
     $check_query = "SELECT * FROM tbl_users WHERE user_email = ?";
     $stmt = mysqli_prepare($connect, $check_query);
