@@ -1,29 +1,50 @@
+<?php 
+// starting the session
+session_start();
+
+// conecting to the the Database with my credentials
+    $connect = mysqli_connect("localhost", "akavaleuskiy","rQZfTqyQDF", "akavaleuskiy");
+
+    // fetching the offers from the DataBase
+    $table_offers = mysqli_query($connect, "SELECT * FROM tbl_offers");
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- This is the home page of the website-->
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div>
-      <div class="studentshop">Student Shop</div>
-      <img class="uclanlogo" src="logo.svg" alt="Uclan Logo" />
-    </div>
 
-    <!-- Here is the header which is the same in every page of the website-->
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet"  href="CSS/header.css">
+        <link rel="stylesheet"  href="CSS/footer.css">
+        <link rel="stylesheet"  href="CSS/main.css">
+        <link rel="stylesheet"  href="CSS/styles.css">
+    </head>
 
-    <div class="home-header">
-      <a href="Index.html">
-        <span class="home">Home</span>
-      </a>
-      <a href="Products.html">
-        <span class="products">Products</span>
-      </a>
-      <a href="Cart.html">
-        <span class="cart">Cart</span>
-      </a>
-    </div>
+
+
+
+    <header class="main-Header">
+        <div class="main-Header-Logo">
+            <img src="logo.svg" alt="UCLan logo">
+            <div class="Students-nav">Students Shop</div>
+        </div>
+
+        <nav class="main-Header-nav">
+            <ul class="LogoList">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="cart.php">Cart</a></li>
+<!-- checks if the user is logged in, and ensures its actually true-->
+                <?php if(isset($_SESSION["logged-in"]) && $_SESSION["logged-in"] == true) echo '<li><a href="logout.php">Logout</a></li>'; else echo '<li><a href="signup.php">Sign up</a></li>'; ?>
+            </ul>
+        </nav>
+  
+    </header>
+
+
     <div class="all-paragraphs">
       <span class="first-title">Where opportunity creates success</span>
       <span class="first-paragraph"
@@ -36,31 +57,39 @@
         >Everything you need to know about UCLan Students Union. Your membership
         starts here.</span
       >
-      <div class="bottom">
+
+            <div class="offersContainer">
+   
+<!-- The while loop iterates though the rows, so it checks all the offers in the DataBase-->
+            <?php 
+            while ($row = mysqli_fetch_assoc($table_offers)) {
+
+                echo "<div class='indexOffers'>";
+            
+                // Here are some styles for the offers to be when displayed
+                echo "<div style='font-size: 2rem; font-weight: lighter'>" . $row["offer_title"] . "</div>";
+				echo "<br>";
+                
+        // output of the offer description 
+                echo $row["offer_dec"] . "<br>";
+                
+                echo "</div><br>";
+            }
+            
+            ?>
+            </div>
+
+        
+            <div class="bottom">
         <span class="together">Together</span>
         <video class="video1" width="400" height="240" controls>
           <source src="video.mp4" type="video/mp4" />
         </video>
-      </div>
-      <span class="second-title"> Join our global community</span>
-      <div class="video2">
-        <!-- Here im adding the second video with Iframe and the link which is provided-->
-        <iframe
-          width="400"
-          height="240"
-          src="https://www.youtube.com/embed/EI_lco-qdw8?si=nU2Z4_myX3WGaaDh"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-
-    <div id="cartItems" class="cart-items"></div>
-
-    <!--Here is the footer and the link about the student union was coppied from the uclan website, this footer is the same in every page -->
+            <div class="framePart">
+                <h1>Join our global community</h1>
+                <iframe src="https://youtube.com/embed/EI_lco-qdw8"> </iframe>
+            </div>
+        </div>
 
     <div class="Footer">
       <div class="column">
@@ -86,25 +115,8 @@
       </div>
     </div>
 
-    <!--Here is the code for the burger menu which is the same in every page of the website-->
-    <div class="home-header">
-      <a href="Index.html" id="HomeLink">
-        <span class="home">Home</span>
-      </a>
-      <a href="Products.html" id="productsLink">
-        <span class="products">Products </span>
-      </a>
-      <a href="Cart.html">
-        <span class="cart">Cart</span>
-      </a>
-      <div class="burger" onclick="toggleMenu()">&#9776;</div>
-    </div>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="Index.html" class="mobile-link">Home</a>
-      <a href="Products.html" class="mobile-link">Products</a>
-      <a href="Cart.html" class="mobile-link">Cart</a>
-    </div>
-    <script src="Script.js"></script>
-  </body>
-</html>
+    </body>
+
+    </html>
+
